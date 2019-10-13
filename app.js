@@ -52,11 +52,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var addition = sum();
-    var multiplication = multiply();
-    var result1 = a + ' and ' + b + ' and ' + c + ' sum to ' + addition + '.';
-    var result2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplication + '.';
-    return [addition,multiplication,result1,result2];
+
+    var addition = sum(a,b);
+    var addition2 = sum(addition[0],c);
+    var multiplication = multiply(a,b);
+    var multiplication2 = multiply(multiplication[0],c);
+    var result1 = a + ' and ' + b + ' and ' + c + ' sum to ' + addition2[0] + '.';
+    var result2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplication2[0] + '.';
+    console.log('result1 : ', result1);
+    console.log('result2 : ', result2);
+    return [addition2[0],multiplication2[0],result1,result2];
 
 }
 
@@ -76,11 +81,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+//var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+//function sumArray(sumArray) { //eslint-disable-line
+    //var [a,b,c]
+    //var add = sum();
+   // return [add, a + b + c + ' was passed in as an array of numbers ' + ' and ' + add + 'is their sum.' ];
 
-}
+
+//}
 
 // Here is the test for sumArray(); uncomment it to run it
 
